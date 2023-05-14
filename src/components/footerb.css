@@ -1,0 +1,77 @@
+.footer-banner {
+  width: 100%;
+  margin: 2rem 0;
+  background-image: url("https://s3.us-east-2.amazonaws.com/statics.tpn.to/backgrounds/topography-blue.svg");
+
+  padding: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.footer-banner-header {
+  display: flex;
+  gap: 2rem;
+}
+.footer-banner-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-banner-header-info h4 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 800;
+}
+.footer-banner-header-info p {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.footer-banner-header-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-subscribe label {
+  padding: 1rem 0;
+}
+
+.footer-subscribe-form-group {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.hint {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #7c8086;
+  background-color: #f7f7f7;
+  line-height: 150%;
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.form-control {
+  padding: 1rem !important;
+}
+.subscribe-footer-btn {
+  padding: 0 1rem;
+  color: white;
+  background-color: rgb(0, 136, 255);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .footer-banner {
+    display: flex;
+    flex-direction: column;
+  }
+}

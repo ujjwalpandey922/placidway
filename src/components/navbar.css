@@ -1,0 +1,158 @@
+li {
+  list-style: none;
+}
+
+.Navbar {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 1rem;
+
+  background-color: #fff;
+
+  color: black;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* NAVBAR MENU */
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.menu li:hover {
+  color: #4c9e9e;
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/*-----------------================ how to add line on hover =================-----------------------*/
+.menu li {
+  padding: 5px 14px;
+  position: relative;
+}
+.menu li > span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  padding-right: 5px;
+  background-color: teal;
+  left: 0;
+  bottom: -1rem;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+.menu li > span:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*-----------------================ how to add line on hover =================-----------------------*/
+
+.navbar-logo {
+  width: 150px;
+}
+
+.Nav-icons-links {
+  display: flex;
+}
+.nav-remaining-icons {
+  display: flex;
+  gap: 2rem;
+  color: #02bf9b;
+  align-items: center;
+}
+.inr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-weight: 700;
+}
+.sign-up {
+  background-color: #02bf9b;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+.ham {
+  display: none;
+}
+/* ============MEDIA========================== */
+
+@media (max-width: 720px) {
+  .Nav-icons-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .ham {
+    display: block;
+  }
+  .menu,
+  .sign-up,
+  .inr {
+    display: none;
+  }
+
+  .ham-container {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.441);
+    display: grid;
+    place-items: center;
+  }
+  .ham-wrapper {
+    background-color: rgb(245, 243, 241);
+
+    color: #02bf9b;
+    font-size: 20px;
+    padding: 3rem;
+
+    border-radius: 15px;
+  }
+  .ham-nav-links {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .ham-nav-links li {
+    list-style: lower-greek;
+    transition: 0.5s;
+  }
+  .ham-nav-links li:hover {
+    color: #183120;
+  }
+}
+@media (max-width: 1024px) {  
+  .nav-links {
+    font-size: 16px;
+    gap: 0.5rem;
+  }
+  .sign-up,
+  .inr {
+    display: none;
+  }
+}
